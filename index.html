@@ -1,8 +1,19 @@
-<html>
+<html> 
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+    $(document).ready(function(){
+        $.get("./data.json",function(result){
+         $("#myname").text(result.myname);
+        $("#mycn").text(result.mycn);   
+        })     
+        
+    })
+    </script>
 <body>
-<h1>Kaguya Manaka</h1>
-    <p>CN：<span id="studentnumber">蓬莱山辉夜</span>
-     <img src="01.jpg" style="border-radius: 10px 20px 40px 80px">
-    </p>
-</body>
+    <h1><span id="myname"></h1>
+    <p>CN：<span id="mycn"></span> </p>
+    <img src="01.jpg" style="border-radius: 10px 20px 40px 80px">
+    <img src="02.jpg" style="border-radius: 10px 20px 40px 80px">
+
+</body> 
 </html>
