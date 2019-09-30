@@ -5,15 +5,26 @@
         $.get("./data.json",function(result){
          $("#myname").text(result.myname);
         $("#mycn").text(result.mycn);   
+        }),
+
+
+        $("#next").click(function(){
+            $.get("./data.json",function(result){
+         $("#myname").text(result.myname);
+        $("#mycn").text(result.mycn);   
+        })
         })     
         
+
     })
     </script>
 <body>
     <h1><span id="myname"></h1>
     <p>CN：<span id="mycn"></span> </p>
+    <input type="button" value="Next" id="next">
     <img src="01.jpg" style="border-radius: 10px 20px 40px 80px">
     <img src="02.jpg" style="border-radius: 10px 20px 40px 80px">
+    
 
 </body> 
 </html>
